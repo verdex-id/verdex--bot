@@ -1,2 +1,14 @@
 discord:
   token: "discord_token_here"
+  setting:
+    embed:
+      color:
+        default: 0x000080
+        success: 0x00b44a
+        warning: 0xe0d118
+        error: 0xe01818
+    welcome:
+      channel_id: "1179738587391074345"
+      message: "Selamat Datang di Verdex Community 👋"
+    chat:
+      channel_id: "1306974158223048775"

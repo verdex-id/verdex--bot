@@ -31,4 +31,5 @@ func NewDiscordDelivery(discordEventHandler *event.DiscordEventHandler) *Discord
 
 func (d *DiscordDelivery) RegisterEvents() {
 	d.Session.AddHandler(d.DiscordEventHandler.Ready)
+	d.Session.AddHandler(d.DiscordEventHandler.MemberAdd)
 }
