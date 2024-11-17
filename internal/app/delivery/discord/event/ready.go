@@ -17,4 +17,17 @@ func (h *DiscordEventHandler) Ready(s *discordgo.Session, _ *discordgo.Ready) {
 		},
 	})
 	log.Println("Discord bot online as " + s.State.User.Username)
+
+	// s.GuildOnboardingEdit("", &discordgo.GuildOnboarding{
+	// 	Prompts: &[]discordgo.GuildOnboardingPrompt{
+	// 		{
+	// 			ID:       "university",
+	// 			Type:     discordgo.GuildOnboardingPromptTypeDropdown,
+	// 			Required: false,
+	// 			Options: []discordgo.GuildOnboardingPromptOption{
+	// 				{}
+	// 			},
+	// 		},
+	// 	},
+	// })
 }

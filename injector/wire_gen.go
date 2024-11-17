@@ -9,12 +9,14 @@ package injector
 import (
 	"github.com/verdex-id/verdex-bot/internal/app/delivery/discord"
 	"github.com/verdex-id/verdex-bot/internal/app/delivery/discord/event"
+	"github.com/verdex-id/verdex-bot/internal/app/service"
 )
 
 // Injectors from injector.go:
 
 func InjectDeliveryDiscord() *delivery.DiscordDelivery {
-	discordEventHandler := event.NewDiscordEventHandler()
+	pddiktiService := service.NewPDDIKTIService()
+	discordEventHandler := event.NewDiscordEventHandler(pddiktiService)
 	discordDelivery := delivery.NewDiscordDelivery(discordEventHandler)
 	return discordDelivery
 }
